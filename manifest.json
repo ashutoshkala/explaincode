@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Code Block Highlighter",
+    "version": "1.0",
+    "description": "Highlights code blocks on a website and adds a button for AI summary.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["scripts/content.js"],
+        "css": ["scripts/styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/hello.png"
+      }
+    }
+  }
+  
